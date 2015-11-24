@@ -1,11 +1,11 @@
 {
-  "babel": {
-    "presets": ["steelbrain"]
-  },
   "rules": [{
     "path": "src/*.js",
     "outputPath": "lib/{name}.js",
-    "plugins": ["babel"]
+    "plugins": ["babel"],
+    "babel": {
+      "presets": ["steelbrain"]
+    }
   }]
 }
 
