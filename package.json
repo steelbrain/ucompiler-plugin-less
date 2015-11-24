@@ -1,0 +1,23 @@
+{
+  "name": "ucompiler-plugin-less",
+  "version": "1.0.0",
+  "description": "LESS Support for UCompiler",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steelbrain/ucompiler-plugin-less.git"
+  },
+  "keywords": [
+    "ucompiler",
+    "less"
+  ],
+  "author": "steelbrain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/steelbrain/ucompiler-plugin-less/issues"
+  },
+  "homepage": "https://github.com/steelbrain/ucompiler-plugin-less#readme"
+}
