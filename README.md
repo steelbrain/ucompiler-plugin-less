@@ -1,7 +1,7 @@
 # UCompiler-Plugin-Less
 
-This is a less support package for UCompiler. To compile your files using
-less, simply start them with `'use less'`.
+This is a less support package for UCompiler. It'll automatically compile
+all of your less files.
 
 ## How to Use
 
