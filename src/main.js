@@ -11,7 +11,9 @@ export function process(contents, {rootDirectory, filePath, config, state}) {
     sourceMap: true,
     paths: [Path.dirname(filePath)]
   })).then(function(output) {
-    state.imports = state.imports.concat(output.imports)
+    output.imports.forEach(function(item) {
+      state.imports.push(Path.join(rootDirectory, item))
+    })
     return {
       contents: output.css,
       sourceMap: JSON.parse(output.map)
