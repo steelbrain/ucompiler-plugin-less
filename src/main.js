@@ -5,19 +5,18 @@ import Less from 'less'
 
 export const minifier = false
 export const compiler = true
-export function process(contents, {relativePath, absolutePath}, {state, config}) {
-  state.ext = 'css'
+export function process(contents, {rootDirectory, filePath, config, state}) {
   return Less.render(contents, Object.assign({}, config.less, {
-    filename: relativePath,
+    filename: Path.relative(rootDirectory, filePath),
     sourceMap: true,
-    paths: [Path.dirname(absolutePath)]
+    paths: [Path.dirname(filePath)]
   })).then(function(output) {
-    if (output.imports.length) {
-      state.imports = state.imports.concat(output.imports)
+    output.imports.forEach(function(item) {
+      state.imports.push(Path.join(rootDirectory, item))
+    })
+    return {
+      contents: output.css,
+      sourceMap: JSON.parse(output.map)
     }
-    if (output.map) {
-      state.sourceMap = output.map.toString()
-    }
-    return output.css
   })
 }
