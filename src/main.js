@@ -11,6 +11,10 @@ export function process(contents, {rootDirectory, filePath, config, state}) {
     sourceMap: true,
     paths: [Path.dirname(filePath)]
   })).then(function(output) {
+    if (!output.map) {
+      return null
+    }
+
     output.imports.forEach(function(item) {
       state.imports.push(Path.join(rootDirectory, item))
     })
