@@ -1,6 +1,6 @@
 {
   "name": "ucompiler-plugin-less",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "LESS Support for UCompiler",
   "main": "lib/main.js",
   "scripts": {
