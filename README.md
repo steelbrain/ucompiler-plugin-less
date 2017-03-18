@@ -1,5 +1,7 @@
 # UCompiler-Plugin-Less
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/steelbrain/ucompiler-plugin-less.svg)](https://greenkeeper.io/)
+
 This is a less support package for UCompiler. It'll automatically compile
 all of your less files.
 
